@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Tobias Riener{% endblock %}</title>
 
+    {% component_css_dependencies %}
     {% load static %}
-    
+
 </head>
 <body>
-    
+    {% component 'navLink' request=request style='rounded' title='About' link='/about' icon='fa-light fa-user'  %} {% endcomponent %}
 </body>
 </html>
