@@ -8,8 +8,9 @@
     {% component_css_dependencies %}
     {% load static %}
 
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
 </head>
 <body>
-    {% component 'navLink' request=request style='rounded' title='About' link='/about' icon='fa-light fa-user'  %} {% endcomponent %}
+    {% component 'nav-link' request=request style='rounded' title='About' link='/' icon='fa-light fa-user'  %} {% endcomponent %}
 </body>
 </html>
