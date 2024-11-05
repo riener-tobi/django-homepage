@@ -15,7 +15,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-HOMEPAGE_DIR = os.path.join(BASE_DIR + 'homepage')
+HOMEPAGE_DIR = os.path.join(BASE_DIR, 'homepage')
 
 
 # Quick-start development settings - unsuitable for production
@@ -150,7 +150,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 COMPONENTS = {
     "dirs": [
-         os.path.join(BASE_DIR, "components"),
          os.path.join(HOMEPAGE_DIR, "components"),
      ],
 }
