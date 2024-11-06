@@ -2,6 +2,9 @@ from django_components import component
 
 VALID_STYLES = {'rounded'}
 
+INACTIVE_ICON_STYLE = 'fa-regular'
+ACTIVE_ICON_STYLE = 'fa-solid'
+
 @component.register('nav-link')
 class NavLink(component.Component):
     template_name = 'nav-link/template.html'
@@ -16,7 +19,7 @@ class NavLink(component.Component):
             isActive = False
 
         if(isActive):
-            icon = icon.replace('fa-light', 'fa-solid')
+            icon = icon.replace(INACTIVE_ICON_STYLE, ACTIVE_ICON_STYLE)
 
         return {
             'style': style,
