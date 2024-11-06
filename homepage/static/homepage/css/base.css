@@ -1,0 +1,23 @@
+body{
+    width: calc(100% - 20px);
+    height: auto;
+    min-height: 200dvh;
+
+    margin: 0px;
+    padding: 10px;
+
+    display: grid;
+    grid-template-rows: 4rem auto 1fr auto 3rem;
+    grid-template-columns: auto 8fr auto;
+    grid-template-areas: 
+        "header header header"
+        "left-aside banner right-aside"
+        "left-aside main right-aside"
+        "left-aside low-content right-aside"
+        "footer footer footer";
+    grid-gap: 10px;
+}
+
+main{
+    grid-area: main;
+}
