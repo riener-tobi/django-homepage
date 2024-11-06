@@ -1,0 +1,14 @@
+<nav class="navbar {{ style }}">
+    <span clasS="nav-logo">
+        <i class="fa-solid fa-code"></i>&ensp;Tobias Riener
+    </span>
+
+    <div class="nav-links">
+        {% for nav_key, nav_value in navlinks %}
+            {% component 'nav-link' request=request style=style title=nav_value.title link=nav_value.link icon=nav_value.icon  %} {% endcomponent %}
+        {% endfor %}
+    </div>
+    <span class="burger-menu">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+</nav>
