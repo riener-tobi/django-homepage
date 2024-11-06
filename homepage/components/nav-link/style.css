@@ -58,6 +58,12 @@
     font-weight: inherit;
 
     border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .nav-link.active{
