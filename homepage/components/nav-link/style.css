@@ -70,3 +70,11 @@
     color: var(--nav-link-active-color);
     background-color: var(--nav-link-active-background-color);
 }
+
+.nav-link:not(.active):hover{
+    transform: scale(1.1);
+}
+
+.nav-link.active:hover, .nav-link.active > a{
+    cursor: default;
+}
