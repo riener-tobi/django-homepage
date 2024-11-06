@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Tobias Riener{% endblock %}</title>
 
+    {% component_css_dependencies %}
     {% load static %}
-    
+
+    <link rel="stylesheet" href="{% static '/homepage/css/base.css' %}">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
 </head>
 <body>
-    
+    {% component 'navbar' request=request style='rounded' navlinks=nav_links  %} {% endcomponent %}
+
+    <main>
+        asd
+    </main>
+    {% component_js_dependencies %}
 </body>
 </html>

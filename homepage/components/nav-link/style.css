@@ -1,0 +1,80 @@
+:root{
+    --nav-link-color: #000;
+    --nav-link-background-color: transparent;
+
+    --nav-link-font-family: arial, sans-serif;
+    --nav-link-font-weight: 600;
+    --nav-link-font-size: 1rem;
+    --nav-link-text-transform: uppercase;
+
+    --nav-link-active-color: #fff;
+    --nav-link-active-background-color: #ff9f1c;
+}
+
+/* Nav-Link Styles  */
+.nav-link.rounded{
+    --nav-link-width: fit-content;
+    --nav-link-height: 1rem;
+    --nav-link-padding: 0.5rem 1rem;
+    --nav-link-margin: 0.5rem;
+
+    --nav-link-border: none;
+    --nav-link-border-radius: var(--nav-link-height);
+}
+
+.nav-link{
+    width: var(--nav-link-width);
+    height: var(--nav-link-height);
+
+    padding: var(--nav-link-padding);
+    margin: var(--nav-link-margin);
+
+    color: var(--nav-link-color);
+    background-color: var(--nav-link-background-color);
+
+    font-family: var(--nav-link-font-family);
+    font-weight: var(--nav-link-font-weight);
+    font-size: var(--nav-link-font-size);
+    text-transform: var(--nav-link-text-transform);
+
+    border: var(--nav-link-border);
+    border-radius: var(--nav-link-border-radius);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.nav-link > a{
+    color: inherit;
+    background-color: transparent;
+
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.nav-link.active{
+    color: var(--nav-link-active-color);
+    background-color: var(--nav-link-active-background-color);
+}
+
+.nav-link:not(.active):hover{
+    transform: scale(1.1);
+}
+
+.nav-link.active:hover, .nav-link.active > a{
+    cursor: default;
+}
