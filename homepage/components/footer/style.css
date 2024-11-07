@@ -1,0 +1,125 @@
+:root{
+    --footer-color: #000;
+    --footer-background-color: #f5f5f5;
+    --footer-spacer-color: #222;
+
+    --footer-font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer{
+    width: auto;
+    height: fit-content;
+
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+
+    background-color: var(--footer-background-color);
+
+    grid-area: footer;
+    justify-self: stretch;
+    align-self: end;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5px 1fr 5px 1fr;
+    grid-template-areas: "footer-left spacer-left footer-middle spacer-right footer-right";
+
+    font-family: var(--footer-font-family);
+
+    border-radius: 10px;
+}
+
+.spacer-right{
+    grid-area: spacer-right;
+    border: 1px solid var(--footer-spacer-color);
+
+    width: auto;
+    height: 100%;
+
+    justify-self: center;
+    align-self: center;
+}
+.spacer-left{
+    grid-area: spacer-left;
+    border: 1px solid var(--footer-spacer-color);
+
+    width: auto;
+    height: 100%;
+
+    justify-self: center;
+    align-self: center;
+}
+
+
+.footer h3{
+    justify-self: center;
+    align-self: flex-start;
+}
+
+.left-footer{
+    grid-area: footer-left;
+    justify-self: center;
+    align-self: stretch;
+}
+
+.left-footer > span{
+    justify-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-footer a{
+    justify-self: center;
+    align-self: center;
+
+    text-decoration: underline;
+    
+    color: var(--footer-color);
+}
+
+.middle-footer{
+    grid-area: footer-middle;
+    justify-self: center;
+    align-self: stretch;
+}
+
+.middle-footer > .copyright{
+    justify-self: center;
+}
+
+.right-footer{
+    grid-area: footer-right;
+    justify-self: center;
+    align-self: stretch;
+}
+
+.right-footer > p{
+    justify-content: center;
+}
+
+@media all and (width <= 850px){
+    .footer{
+        padding: 1rem;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 6rem 5px 6rem 5px 6rem;
+        grid-template-areas: 
+            "footer-middle "
+            "spacer-left"
+            "footer-left"
+            "spacer-right"
+            "footer-right";
+    }
+
+    .spacer-right{
+        width: 100%;
+        height: auto;
+    }
+    .spacer-left{
+        width: 100%;
+        height: auto;
+    }
+}

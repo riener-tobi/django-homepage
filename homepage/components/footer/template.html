@@ -1,0 +1,26 @@
+<footer class="footer">
+    <div class="left-footer">
+        <h3>Links</h3>
+        <span>
+            {% for link_key, link_value in footerlinks %} 
+                <a href="{{ link_value }}">{{ link_key }}</a> &ensp;
+            {% endfor %}
+        </span>
+    </div>
+
+    <hr class="spacer-left">
+
+    <div class="middle-footer">
+        <h3>{{ brand_name }}</h3>
+        <h5 class="copyright">{{ copyright }} &copy; {{ copyright_year }}</h5>
+    </div>
+    
+    <hr class="spacer-right">
+
+    <div class="right-footer">
+        <h3>Contact</h3>
+        <span>
+            <i class="fa-solid fa-envelope"></i>&ensp;{{ email }}
+        </span>
+    </div>
+</footer>
