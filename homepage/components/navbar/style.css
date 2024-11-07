@@ -46,6 +46,8 @@
     flex-wrap: nowrap;
     
     box-shadow: var(--navbar-shadow);
+
+    justify-self: center;
 }
 
 .nav-links{
@@ -80,6 +82,8 @@
 }
 
 .navbar-background{
+    width: 100%;
+
     grid-area: header;
     justify-self: center;
     align-self: center;
