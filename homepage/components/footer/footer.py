@@ -16,4 +16,3 @@ class NavLink(component.Component):
     
     class Media:
         css = 'footer/style.css'
-        js = 'footer/script.js'
